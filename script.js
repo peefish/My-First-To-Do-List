@@ -1,11 +1,12 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+
 function addTask(){
-    if(inputBox.value === ''){
+    if (inputBox.value === '') {
         alert("You have to write something!");
     }
-    else{
+    else {
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
@@ -16,6 +17,7 @@ function addTask(){
     inputBox.value = "";
     saveData();
 }
+
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
